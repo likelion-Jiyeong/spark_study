@@ -1,0 +1,9 @@
+* 이슈사항 
+1) No module named numpy 에러가 발생함
+=> 가상환경에 numpy 설치 후 가상환경 접속하여 실행하니 해결
+2) 스파크 셸이 꺼지고 새로 실행시키면 그 전의 변수들이 인식안됨
+-> 편하게 실습할 수 있는 환경을 찾아봐야함
+
+* 실습내용
+MLLib 활용. train, test split, 전처리 등
+encoding, pipeline, fit 실행
