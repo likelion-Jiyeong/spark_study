@@ -1,0 +1,15 @@
+실습내용
+데이터를 처리하는 여러 API를 실습해본다.
+
+1) selectExpr은 생각보다 유용하다.
+ex) df.selectExpr("*","(FROM_AREA = DEST_AREA) as withinArea")\.show(2)
+=> 출발지와 도착지가 같으면 True, 틀리면 False인 withinArea 컬럼 추가
+2) 데이터프레임에 컬럼 추가
+ex) df.withColumn("newColumn", lit(1)).show(2)
+
+이 외에 컬럼 drop, 변경, 등이 있다.
+3) 고유한 row 개수 얻기
+df.select("column").distinct().count()
+
+4) 데이터프레임에 row를 추가하기 위해서는 새로운 데이터프레임 객체를
+만들어야한다.
