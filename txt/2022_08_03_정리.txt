@@ -1,0 +1,20 @@
+학습내용 : 모든 예제를 실습하기는 어려워서 쭉 읽고 넘김.
+대부분 고수준의 API를 사용해서 데이터를 처리하고 RDD는 거의 사용하지 않음
+
+1) 스파크 배포
+실행은 클러스터모드 or 클라이언트 모드 둘 중에 사용(클러스터 모드를 주로 사용함)
+2) 스파크 애플리케이션 개발하기
+python main문을 작성한다. 
+
+if __name__ == '__main__':
+  from pyspark.sql import SparkSession
+  spark = SparkSession.builder \
+  .master("local") \
+  .appName("Test App") \
+  .config("spark.some.config.option", "some-value") \
+  .getOrCreate()
+
+애플리케이션 실행법
+$SPARK_HOME/bin/spark-submit --master local pyspark-template/main.py
+
+3) 스파크 배포환경 등 읽음
